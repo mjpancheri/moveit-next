@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
-import { CountdownContext } from '../contexts/CountdownContext';
+import { useCountdown } from '../contexts/CountdownContext';
 import styles from '../styles/components/CountDown.module.css';
 
 export function CountDown() {
@@ -11,7 +11,7 @@ export function CountDown() {
     isActive, 
     startCountdown, 
     resetCountdown 
-  } = useContext(CountdownContext);
+  } = useCountdown();
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');

@@ -1,0 +1,131 @@
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--blue-dark);
+}
+
+.container section {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  align-content: center;
+}
+
+.authenticate {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.authenticate header {
+  margin: 0;
+}
+
+.authenticate main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  margin: 0;
+}
+
+.authenticate main strong {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0;
+}
+
+.authenticate main p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: var(--text-highlight);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.authenticate main p img {
+  margin-right: 0.5rem;
+}
+
+.message {
+  position: absolute;
+  top: 6rem;
+  border: 1px solid var(--gray-line);
+  border-radius: 5px;
+  background: var(--yelloy);
+  color: var(--yelloy-dark);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 21.5rem;
+}
+
+.loading {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.spinner {
+  -webkit-animation:spin 2s linear infinite;
+  -moz-animation:spin 2s linear infinite;
+  animation:spin 2s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.authenticate footer {
+  margin: 0 0 10rem 0;
+  position: relative;
+}
+
+.authenticate footer input {
+  position: absolute;
+  top: 0.5rem;
+  width: 18rem;
+  height: 3rem;
+
+  border: 0;
+  background: var(--white);
+  border-radius: 5px 0px 0px 5px;
+
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+.authenticate footer button {
+  position: absolute;
+  top: 0.5rem;
+  left: 18rem;
+  height: 3rem;
+
+  border: 0;
+  border-radius: 0px 5px 5px 0px;
+  background: var(--green);
+  padding: 0 1rem;
+
+  transition: filter 0.2s;
+}
+
+.authenticate footer button:disabled {
+  background: var(--gray-line);
+}
+
+.authenticate footer button:hover {
+  filter: brightness(0.9);
+}

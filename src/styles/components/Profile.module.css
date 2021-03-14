@@ -27,3 +27,18 @@
 .profileContainer div p img {
   margin-right: 0.5rem;
 }
+
+.logout {
+  background: var(--red);
+  float: right;
+
+  border: 0;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0.2rem;
+  font-size: 0px;
+}
+
+.logout img {
+  width: 70%;
+}
